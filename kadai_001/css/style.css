@@ -1,0 +1,225 @@
+
+
+body {
+  margin: 0 auto 0 auto;
+  background-color:#ffffff ;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* ヘッダー*/
+.header-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin:0 auto;
+}
+
+/* MyProfileの見出し部分 */
+#index-h1{
+  font-size: 34px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid black;
+  color:#000000 ;
+  padding:0 10px 0 10px;
+}
+
+/* ナビゲーションメニュー */
+#nav-pc {
+  display: flex;
+ }
+
+ #nav-pc li{
+  list-style:none;
+  margin:0 20px;
+ }
+
+
+ #nav-pc li a{
+  text-decoration: none;
+  font-size: 34px;
+  font-weight: bold;
+  color:#000000 ;
+ }
+
+#main-photo{
+  height: 100%;
+  width:100%;
+}
+
+.index-h2{
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/*About*/
+#about-flex{
+  display: flex;
+  justify-content: space-between;
+  max-width: 840px;
+  margin:0 auto;
+}
+
+#about-photo{
+  border-radius:50%;
+}
+
+#index-h3{
+  font-size: 24px;
+  font-weight: bold;
+  padding-left:10px;
+}
+
+#about-explain{
+  font-size: 18px;
+  margin-top:30px;
+}
+
+/*Works*/
+.works-flex{
+  display: flex;
+  justify-content: space-between;
+  margin:0 auto;
+  max-width: 840px;
+} 
+
+.works-explain{
+  margin:0 10px;
+  width:35%;
+}
+
+.works-photo{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.works-explain p{
+  text-align: left;
+}
+
+#copyright {
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+/* 画面幅が767px以下のとき */
+@media screen and (max-width: 767px) {
+  /* スマートフォン用のスタイルを指定する */
+
+  #index-h1{
+    font-size: 24px;
+    margin-left:10px;
+  }
+
+  #nav-pc {
+    margin-right:8px;
+    margin-bottom:8px;
+   }
+
+  #nav-pc li{
+    margin: 0 10px;
+  }
+
+  #nav-pc li a{
+    font-size: 24px;
+   }
+
+  #about-flex {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .works-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .works-explain{
+    width:95%;
+  }
+
+  .works-explain p{
+    text-align: center;
+  }
+}
+
+/*======== jQuery発展編ここから ========*/
+
+
+/* PC用カルーセル設定 */
+.carousel {
+  margin: 0 20px 0 20px;
+}
+  
+.carouselImg {
+  width: 100%;
+}
+
+#back-btn {
+  display: none;
+  padding: 28px 24px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 38px;
+  right: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/*===========
+inview
+===========*/
+
+section {
+  transition: 1s;
+  opacity: 0;
+}
+ 
+.fadeIn{
+  opacity: 1;
+}
+
+/* Worksの画像部分 */
+.item img {
+  cursor: pointer;
+}
+
+/* モーダルで画像の拡大表示*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.big-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width:80%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.close-btn{
+  position: absolute;
+  color:#ffffff;
+  top:10px;
+  right: 20px;
+  font-size: 40px;
+  text-decoration: none;
+}
