@@ -33,27 +33,7 @@ $(function() {
     }
   });
 
-/*
-//TOPボタン押した際になめらかに戻る
-$('back-btn').on('click',function(){
-  $('body, html').animate({ scrollTop: 0 }, 100);
-});
-
-$('a[href^="#"]').on('click',function(){
-  $('body, html').animate({ scrollTop: 0 }, 300);
-});
-
-$('a[href^="#"]').on('click',function(){
-  $('body, html').animate({ scrollTop: 0 }, 300);
-});
-*/
-
-// なめらかに戻る
-/*
-  var $link;
-  $link = $('body').find('a');
-*/    
-
+ //滑らかに戻る
   $('a[href^="#"]').on('click',function(){
     //href属性から、リンク先のid属性を取得
     const href = $(this).attr('href');
@@ -102,21 +82,10 @@ $('.works-photo').click(function () {
 });
 
 
-/*
-$('.works-photo').click(function () {
-  const imgSrc = $(this).attr('src');
-  const imgAlt = $(this).attr('alt');
-  $('.big-img').attr({
-    src: imgSrc,
-    alt: imgAlt,
-  });
-  $('.modal').fadeIn();
-});
-*/ 
-
 // 閉じるボタンをクリックしたときにモーダルを閉じる
 $('.close-btn').click(function () {
   $('.modal').fadeOut();
+  $("body").css("overflow","auto");//スクロールロック解除
 });
 
 });
